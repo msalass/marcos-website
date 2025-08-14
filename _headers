@@ -8,5 +8,21 @@
   Cache-Control: public, max-age=0, must-revalidate
   Content-Security-Policy: default-src 'self'; img-src 'self' data: https: plausible.io; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' plausible.io; font-src 'self' data:; connect-src 'self' plausible.io
 
-/assets/*
+/assets/*.css
+  Cache-Control: public, max-age=3600
+
+/assets/*.js
+  Cache-Control: public, max-age=3600
+
+/assets/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.pdf
   Cache-Control: public, max-age=31536000, immutable
