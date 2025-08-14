@@ -1,0 +1,14 @@
+# Force HTTPS on apex
+http://salassaavedra.org/*   https://salassaavedra.org/:splat  301!
+
+# Force apex (no www)
+https://www.salassaavedra.org/*  https://salassaavedra.org/:splat  301!
+
+# Canonical home
+/index.html   /   301
+
+# Nice shortcuts
+/cv           /assets/CV.pdf   302
+/scholar      https://scholar.google.com/citations?user=skWigjoAAAAJ&hl=en   302
+/orcid        https://orcid.org/0000-0003-0358-5676   302
+/linkedin     https://www.linkedin.com/in/marcos-e-salas-saavedra   302
