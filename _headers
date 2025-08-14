@@ -1,0 +1,16 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  # Conservative HTML caching (always serve fresh)
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/*
+  # Long cache for static assets (change filename to bust cache)
+  Cache-Control: public, max-age=31536000, immutable
+
+/* 
+  # Basic Content Security Policy (safe for your current site)
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self' data:; connect-src 'self'
