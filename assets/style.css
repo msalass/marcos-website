@@ -57,3 +57,18 @@ summary{cursor:pointer;font-weight:700;color:var(--text)}
   .menu a { padding: 12px 10px; background: transparent; border-radius: 10px; }
   .menu a:hover { background: var(--panel); color: var(--text); }
 }
+/* Ensure images never overflow on small screens */
+img { max-width: 100%; height: auto; display: block; }
+
+/* Hero layout & image sizing */
+.hero { display: grid; gap: 24px; }
+.hero-img { width: 100%; height: auto; border-radius: 12px; object-fit: cover; }
+
+/* Tight, scroll-proof layout on phones */
+@media (max-width: 880px) {
+  .hero { grid-template-columns: 1fr; align-items: start; }
+  .tag { display: inline-block; margin-top: 6px; } /* wrap tags instead of stretching row */
+}
+
+/* Optional belt-and-suspenders if something still overflows */
+html, body { overflow-x: hidden; }
