@@ -6,7 +6,7 @@
   <meta name="description" content="Environmental Geochemist • U–Th Geochronology • Coral Paleoclimate">
   <meta property="og:title" content="Marcos Salas-Saavedra, PhD">
   <meta property="og:description" content="Environmental Geochemist • U–Th Geochronology • Coral Paleoclimate">
-  <meta property="og:image" content="assets/profile.svg">
+  <meta property="og:image" content="assets/profile.jpeg">
   <link rel="icon" href="assets/profile.svg">
   <link rel="stylesheet" href="assets/style.css">
   <script type="application/ld+json">
@@ -27,7 +27,7 @@
 
     <!-- Nav -->
     <nav id="site-menu" class="menu" data-open="false">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="research.html">Research</a>
       <a href="publications.html">Publications</a>
       <a href="teaching.html">Teaching & Outreach</a>
@@ -89,5 +89,21 @@ Collectively, his work aims to deliver robust, decision-relevant insights into E
       <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
     </div>
   </div>
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('site-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = menu.getAttribute('data-open') === 'true';
+      menu.setAttribute('data-open', String(!open));
+      toggle.setAttribute('aria-expanded', String(!open));
+    });
+    // Close menu after tapping a link
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.setAttribute('data-open','false'); toggle.setAttribute('aria-expanded','false');
+    }));
+  }
+</script>
+
 </body>
 </html>
