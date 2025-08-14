@@ -2,141 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Marcos Salas-Saavedra, PhD</title>
-  <meta name="description" content="Environmental Geochemist • U–Th Geochronology • Coral Paleoclimate">
-  <meta property="og:title" content="Marcos Salas-Saavedra, PhD">
-  <meta property="og:description" content="Environmental Geochemist • U–Th Geochronology • Coral Paleoclimate">
-  <meta property="og:image" content="assets/profile.svg">
-  <link rel="icon" href="assets/profile.svg">
+  <title>Research — Marcos Salas-Saavedra, PhD</title>
+  <meta name="description" content="Research focus and current projects: coral paleoclimate archives, U–Th geochronology, method development.">
+  <meta property="og:title" content="Research — Marcos Salas-Saavedra">
+  <meta property="og:description" content="Coral archives, U–Th dating, and method development for robust paleoclimate and sea-level reconstructions.">
+  <meta property="og:image" content="assets/profile.jpeg">
+  <link rel="icon" href="assets/profile.jpeg">
   <link rel="stylesheet" href="assets/style.css">
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Marcos Salas-Saavedra, PhD",
-    "jobTitle":"Environmental Geochemist",
-    "affiliation":{"@type":"Organization","name":"Princeton University"},
-    "email":"mailto:yourname@example.com",
-    "address":"Princeton, NJ, USA",
-    "sameAs":[
-      "https://scholar.google.com/citations?user=skWigjoAAAAJ&hl=en",
-      "https://orcid.org/0000-0003-0358-5676",
-      "https://github.com/msalass",
-      "https://www.linkedin.com/in/marcos-e-salas-saavedra",
-      "https://x.com/"
-    ]
-  }
+  {"@context":"https://schema.org","@type":"Person","name":"Marcos Salas-Saavedra, PhD","jobTitle":"Environmental Geochemist","affiliation":{"@type":"Organization","name":"Princeton University"},"sameAs":["https://scholar.google.com/citations?user=skWigjoAAAAJ&hl=en","https://orcid.org/0000-0003-0358-5676","https://github.com/msalass","https://www.linkedin.com/in/marcos-e-salas-saavedra"]}
   </script>
-  <style>
-    /* keep images tidy even if style.css wasn't updated yet */
-    .media{display:block;width:100%;height:auto;border-radius:12px;margin-bottom:10px;object-fit:cover}
-  </style>
+  <style>.media{display:block;width:100%;height:auto;border-radius:12px;margin-bottom:10px;object-fit:cover}</style>
 </head>
 <body>
   <div class="header">
-  <div class="container nav">
-    <div class="brand">
-      <a href="index.html">Marcos Salas-Saavedra, PhD
-        <small>Environmental Geochemist • U–Th Geochronology • Coral Paleoclimate</small>
-      </a>
+    <div class="container nav">
+      <div class="brand"><a href="index.html">Marcos Salas-Saavedra, PhD<small>Environmental Geochemist • U–Th Geochronology • Coral Paleoclimate</small></a></div>
+      <button class="menu-toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Toggle menu">☰ Menu</button>
+      <nav id="site-menu" class="menu" data-open="false">
+        <a href="index.html">Home</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="teaching.html">Teaching & Outreach</a>
+        <a href="projects.html">Projects</a>
+        <a href="talks.html">Talks & Media</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-
-    <!-- Mobile menu button -->
-    <button class="menu-toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Toggle menu">☰ Menu</button>
-
-    <!-- Nav -->
-    <nav id="site-menu" class="menu" data-open="false">
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="publications.html">Publications</a>
-      <a href="teaching.html">Teaching & Outreach</a>
-      <a href="projects.html">Projects</a>
-      <a href="talks.html">Talks & Media</a>
-      <a href="contact.html">Contact</a>
-    </nav>
   </div>
-</div>
 
   <div class="container">
-
-    <!-- Overview -->
     <section class="section">
       <h2>Research Overview</h2>
-      <p>
-        I investigate how reef systems and sea level have changed through time, combining
-        <strong>U–Th geochronology</strong>, carbonate geochemistry, and <strong>coral proxy records</strong> with transparent,
-        Python-based analysis. My work focuses on extracting seasonal to multi-decadal variability (e.g., ENSO) from coral archives
-        and on improving chronologies by screening and dating <em>meteoric calcite</em> phases in altered fossil corals.
-      </p>
-      <p>
-        I pair careful field sampling with laboratory tools (LA-ICP-MS, MC-ICP-MS, micro-CT/3D, SEM), emphasizing rigorous
-        QA/QC for low-level trace elements and REEs. The goal is decision-relevant reconstructions of ocean–climate history built
-        on reproducible methods and open, well-documented data reduction.
-      </p>
+      <p>I study how reef systems and sea level have changed through time by pairing high-precision <strong>U–Th geochronology</strong>, carbonate geochemistry, and <strong>coral proxy records</strong> with transparent, Python-based workflows. I’m especially interested in extracting seasonal to multi-decadal signals (e.g., ENSO) from coral archives and improving chronologies in challenging materials such as <em>meteoric calcite</em> within altered fossil corals.</p>
     </section>
 
-    <!-- Research Focus -->
     <section class="section">
       <h2>Research Focus</h2>
       <div class="grid">
-
         <div class="card">
-          <img class="media" src="assets/coral-archives.jpeg" alt="Coral core and slab used as paleoclimate archive" loading="lazy" decoding="async">
+          <img class="media" src="assets/coral-archives.jpeg" alt="Coral core and slab used as paleoclimate archive" loading="lazy">
           <strong>Coral Paleoclimate Archives</strong>
-          <p class="muted">
-            Seasonal to multi-decadal reconstructions from coral trace elements and isotopes (Mg/Ca, Li/Mg, δ<em>13</em>C).
-            Time-series pipelines support seasonality extraction, anomaly detection, and event characterization linked to ENSO and hydroclimate.
-          </p>
+          <p class="muted">Seasonal to multi-decadal reconstructions from coral trace elements and isotopes (e.g., Mg/Ca, Li/Mg) measured by LA-ICP-MS and complementary tools.</p>
         </div>
-
         <div class="card">
-          <img class="media" src="assets/uth-dating.jpeg" alt="U–Th preparation and instrumentation" loading="lazy" decoding="async">
+          <img class="media" src="assets/uth-dating.jpeg" alt="U–Th preparation and instrumentation" loading="lazy">
           <strong>U–Th Geochronology</strong>
-          <p class="muted">
-            High-precision dating of carbonates, including meteoric calcite phases in altered fossil corals, to refine Holocene sea-level histories.
-            Work includes micro-sampling strategies, spike calibration, and open-system checks to minimize age bias and reversals.
-          </p>
+          <p class="muted">High-precision dating of carbonates, including meteoric calcite phases in altered fossil corals, to refine Holocene sea-level histories.</p>
         </div>
-
         <div class="card">
-          <img class="media" src="assets/method-dev.jpeg" alt="Analytical setup for trace-element and REE workflows" loading="lazy" decoding="async">
+          <img class="media" src="assets/method-dev.jpeg" alt="Analytical setup for trace-element and REE workflows" loading="lazy">
           <strong>Method Development</strong>
-          <p class="muted">
-            Instrument optimization, standards and QC design, and REE/trace-element workflows at ultra-low levels.
-            I build reproducible, Python-based data-reduction notebooks and validation tests to ensure robust, comparable results.
-          </p>
+          <p class="muted">Instrument optimization, standards and QC design, and REE/trace-element workflows at ultra-low levels with reproducible data-reduction notebooks.</p>
         </div>
-
       </div>
     </section>
 
-    <!-- Current Projects -->
     <section class="section">
       <h2>Current Projects</h2>
       <div class="grid">
-
         <div class="card">
-          <img class="media" src="assets/meteoric-calcite.jpeg" alt="Altered fossil coral showing meteoric calcite" loading="lazy" decoding="async">
+          <img class="media" src="assets/meteoric-calcite.jpeg" alt="Altered fossil coral showing meteoric calcite" loading="lazy">
           <strong>Sea Level from Meteoric Calcite</strong>
-          <p>
-            U–Th dating of meteoric calcite in highly altered fossil corals. Trace-element screening, micro-sampling,
-            and open-system checks improve chronologies and reduce uncertainty in Holocene sea-level reconstructions.
-          </p>
+          <p>U–Th dating of meteoric calcite in highly altered fossil corals. Trace-element screening, micro-sampling, and open-system checks improve chronologies and reduce uncertainty.</p>
         </div>
-
-        <!-- Updated third project card -->
         <div class="card">
-          <img class="media" src="assets/reef-chemistry.jpeg" alt="Mid-Holocene coral slabs and laser sampling, Heron Reef" loading="lazy" decoding="async">
-          <strong>Mid-Holocene Coral Paleoclimate (Heron Reef)</strong>
-          <p>
-            Using fossil corals from Heron Reef, we built two ~60-year snapshots at ~6.9 and 5.2 ka. Band-by-band laser
-            measurements of Mg, Sr, Mn, and rare-earth elements track temperature, water quality, and river-plume influence.
-            The records test how ENSO (El Niño–La Niña) and the Indo-Australian Summer Monsoon behaved in the mid-Holocene.
-            A new calibration step strengthens faint signals, revealing links between climate swings and coastal water quality
-            on the Great Barrier Reef long before instruments.
-          </p>
+          <img class="media" src="assets/enso-proxies.jpeg" alt="Time-series concept for ENSO signals in coral geochemistry" loading="lazy">
+          <strong>ENSO from Coral Proxies</strong>
+          <p>LA-ICP-MS Mg/Ca and Li/Mg time series with seasonal removal and anomaly detection toward consistent metrics of ENSO amplitude and frequency.</p>
         </div>
-
+        <div class="card">
+          <img class="media" src="assets/reef-chemistry.jpeg" alt="Mid-Holocene coral slabs and laser sampling, Heron Reef" loading="lazy">
+          <strong>Mid-Holocene Coral Paleoclimate (Heron Reef)</strong>
+          <p>Two ~60-year snapshots at ~6.9 and 5.2 ka from fossil corals. Laser profiles of Mg, Sr, Mn, and REEs test ENSO and monsoon behavior and link climate swings to coastal water quality.</p>
+        </div>
       </div>
     </section>
 
@@ -145,5 +84,20 @@
       <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
     </div>
   </div>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('site-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const open = menu.getAttribute('data-open') === 'true';
+        menu.setAttribute('data-open', String(!open));
+        toggle.setAttribute('aria-expanded', String(!open));
+      });
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        menu.setAttribute('data-open','false'); toggle.setAttribute('aria-expanded','false');
+      }));
+    }
+  </script>
 </body>
 </html>
