@@ -10,31 +10,95 @@
   <link rel="icon" href="assets/profile.svg">
   <link rel="stylesheet" href="assets/style.css">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "Person", "name": "Marcos Salas-Saavedra, PhD", "jobTitle": "Environmental Geochemist", "affiliation": {"@type": "Organization", "name": "Princeton University"}, "email": "mailto:yourname@example.com", "address": "Princeton, NJ, USA", "sameAs": ["https://scholar.google.com/", "https://orcid.org/", "https://github.com/msalass", "https://www.linkedin.com/", "https://x.com/"]}
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Marcos Salas-Saavedra, PhD",
+    "jobTitle":"Environmental Geochemist",
+    "affiliation":{"@type":"Organization","name":"Princeton University"},
+    "email":"mailto:yourname@example.com",
+    "address":"Princeton, NJ, USA",
+    "sameAs":[
+      "https://scholar.google.com/citations?user=skWigjoAAAAJ&hl=en",
+      "https://orcid.org/0000-0003-0358-5676",
+      "https://github.com/msalass",
+      "https://www.linkedin.com/in/marcos-e-salas-saavedra",
+      "https://x.com/"
+    ]
+  }
   </script>
+  <style>
+    /* Small helpers in case style.css isn't updated yet */
+    .media{display:block;width:100%;height:auto;border-radius:12px;margin-bottom:10px;object-fit:cover}
+    .gallery{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .gallery-img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px}
+  </style>
 </head>
 <body>
   <div class="header"><div class="container nav">
     <div class="brand"><a href="index.html">Marcos Salas-Saavedra, PhD<small>Environmental Geochemist • U–Th Geochronology • Coral Paleoclimate</small></a></div>
-    <nav class="menu"><a href="index.html" class="">Home</a>
-        <a href="research.html" class="">Research</a>
-        <a href="publications.html" class="">Publications</a>
-        <a href="teaching.html" class="active">Teaching & Outreach</a>
-        <a href="projects.html" class="">Projects</a>
-        <a href="talks.html" class="">Talks & Media</a>
-        <a href="contact.html" class="">Contact</a></nav>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html" class="active">Teaching & Outreach</a>
+      <a href="projects.html">Projects</a>
+      <a href="talks.html">Talks & Media</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div></div>
+
   <div class="container">
 
-<section class="section">
-  <h2>Teaching & Outreach</h2>
-  <p>I teach geochemical methods and climate applications with an emphasis on transparent analysis and hands-on, safe laboratory practice.</p>
-  <div class="grid">
-    <div class="card"><strong>Workshops</strong><p>Python for Geochemists; LA-ICP-MS QA/QC; U–Th data reduction and reporting.</p></div>
-    <div class="card"><strong>Guest Lectures</strong><p>Coral archives and sea-level reconstructions (Princeton; UQ).</p></div>
-    <div class="card"><strong>Community</strong><p>Science communication and faith-and-science dialogues for broad audiences.</p></div>
-  </div>
-</section>
+    <section class="section">
+      <h2>Teaching & Outreach</h2>
+      <p>
+        I teach geochemical methods and climate applications with an emphasis on transparent analysis,
+        reproducible workflows, and safe, hands-on laboratory practice. I enjoy translating technical concepts
+        into approachable exercises for students at different levels.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <strong>Workshops</strong>
+          <p class="muted">Python for Geochemists; LA-ICP-MS QA/QC; U–Th data reduction and reporting.</p>
+        </div>
+        <div class="card">
+          <strong>Guest Lectures</strong>
+          <p class="muted">Coral archives & sea-level reconstructions (Princeton; UQ).</p>
+        </div>
+        <div class="card">
+          <strong>Community</strong>
+          <p class="muted">Science communication and dialogues connecting climate, oceans, and society.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- New section: Volunteer Teaching in Bangladesh -->
+    <section class="section">
+      <h2>Volunteer Teaching in Bangladesh</h2>
+      <p>
+        I volunteered with students and early-career researchers in Bangladesh, co-leading short courses on
+        field sampling, carbonate geochemistry, and data analysis. We covered practical lab safety, sample prep,
+        and open workflows in Python for organizing, visualizing, and quality-checking geochemical time series.
+        The goal was to build confidence with real datasets and to connect local environmental questions with
+        methods that are transparent and repeatable.
+      </p>
+
+      <!-- Topics snapshot -->
+      <ul class="list" style="margin-top:12px">
+        <li><strong>Hands-on methods:</strong> sampling, QA/QC, and simple calibration checks</li>
+        <li><strong>Data skills:</strong> tidy data, plotting, seasonal cycles & anomaly detection</li>
+        <li><strong>Applications:</strong> coastal water quality, carbonate chemistry, coral proxies</li>
+      </ul>
+
+      <!-- 4-image gallery (upload these files into /assets) -->
+      <div class="gallery" style="margin-top:16px">
+        <img class="gallery-img" src="assets/bangladesh-1.jpeg" alt="Teaching session with students in Bangladesh" loading="lazy" decoding="async">
+        <img class="gallery-img" src="assets/bangladesh-2.jpeg" alt="Hands-on lab activity during workshop" loading="lazy" decoding="async">
+        <img class="gallery-img" src="assets/bangladesh-3.jpeg" alt="Group discussion on data analysis" loading="lazy" decoding="async">
+        <img class="gallery-img" src="assets/bangladesh-4.jpeg" alt="Field demonstration and sampling overview" loading="lazy" decoding="async">
+      </div>
+    </section>
 
     <div class="footer">
       <div>© <span id="y"></span> Marcos Salas-Saavedra, PhD • <a href="assets/CV.pdf" style="color:var(--accent);text-decoration:none">CV (PDF)</a></div>
