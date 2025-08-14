@@ -27,6 +27,10 @@
     ]
   }
   </script>
+  <style>
+    /* keep images tidy even if style.css wasn't updated yet */
+    .media{display:block;width:100%;height:auto;border-radius:12px;margin-bottom:10px;object-fit:cover}
+  </style>
 </head>
 <body>
   <div class="header"><div class="container nav">
@@ -50,8 +54,8 @@
       <p>
         I investigate how reef systems and sea level have changed through time, combining
         <strong>U–Th geochronology</strong>, carbonate geochemistry, and <strong>coral proxy records</strong> with transparent,
-        Python-based analysis. My work focuses on extracting seasonal to multi-decadal variability (e.g., ENSO) from coral archives and
-        on improving chronologies by screening and dating <em>meteoric calcite</em> phases in altered fossil corals.
+        Python-based analysis. My work focuses on extracting seasonal to multi-decadal variability (e.g., ENSO) from coral archives
+        and on improving chronologies by screening and dating <em>meteoric calcite</em> phases in altered fossil corals.
       </p>
       <p>
         I pair careful field sampling with laboratory tools (LA-ICP-MS, MC-ICP-MS, LIBS, micro-CT/3D, SEM), emphasizing rigorous
@@ -66,19 +70,7 @@
       <div class="grid">
 
         <div class="card">
-          <picture>
-            <!-- OPTIONAL WEBP (uncomment if you upload the .webp files)
-            <source type="image/webp" srcset="
-              assets/research/coral-archives-480.webp 480w,
-              assets/research/coral-archives-800.webp 800w,
-              assets/research/coral-archives-1200.webp 1200w" sizes="(max-width: 880px) 100vw, 520px">
-            -->
-            <source type="image/jpeg" srcset="
-              assets/research/coral-archives-480.jpeg 480w,
-              assets/research/coral-archives-800.jpeg 800w,
-              assets/research/coral-archives-1200.jpeg 1200w" sizes="(max-width: 880px) 100vw, 520px">
-            <img class="media" src="assets/research/coral-archives-800.jpeg" alt="Coral core and slab used as paleoclimate archive" width="1200" height="750">
-          </picture>
+          <img class="media" src="assets/coral-archives.jpeg" alt="Coral core and slab used as paleoclimate archive" loading="lazy" decoding="async">
           <strong>Coral Paleoclimate Archives</strong>
           <p class="muted">
             Seasonal to multi-decadal reconstructions from coral trace elements and isotopes (Mg/Ca, Li/Mg, δ<em>13</em>C).
@@ -87,19 +79,7 @@
         </div>
 
         <div class="card">
-          <picture>
-            <!-- OPTIONAL WEBP
-            <source type="image/webp" srcset="
-              assets/research/uth-dating-480.webp 480w,
-              assets/research/uth-dating-800.webp 800w,
-              assets/research/uth-dating-1200.webp 1200w" sizes="(max-width: 880px) 100vw, 520px">
-            -->
-            <source type="image/jpeg" srcset="
-              assets/research/uth-dating-480.jpeg 480w,
-              assets/research/uth-dating-800.jpeg 800w,
-              assets/research/uth-dating-1200.jpeg 1200w" sizes="(max-width: 880px) 100vw, 520px">
-            <img class="media" src="assets/research/uth-dating-800.jpeg" alt="U–Th preparation and instrumentation" width="1200" height="750">
-          </picture>
+          <img class="media" src="assets/uth-dating.jpeg" alt="U–Th preparation and instrumentation" loading="lazy" decoding="async">
           <strong>U–Th Geochronology</strong>
           <p class="muted">
             High-precision dating of carbonates, including meteoric calcite phases in altered fossil corals, to refine Holocene sea-level histories.
@@ -108,19 +88,7 @@
         </div>
 
         <div class="card">
-          <picture>
-            <!-- OPTIONAL WEBP
-            <source type="image/webp" srcset="
-              assets/research/method-dev-480.webp 480w,
-              assets/research/method-dev-800.webp 800w,
-              assets/research/method-dev-1200.webp 1200w" sizes="(max-width: 880px) 100vw, 520px">
-            -->
-            <source type="image/jpeg" srcset="
-              assets/research/method-dev-480.jpeg 480w,
-              assets/research/method-dev-800.jpeg 800w,
-              assets/research/method-dev-1200.jpeg 1200w" sizes="(max-width: 880px) 100vw, 520px">
-            <img class="media" src="assets/research/method-dev-800.jpeg" alt="Analytical setup for trace-element and REE workflows" width="1200" height="750">
-          </picture>
+          <img class="media" src="assets/method-dev.jpeg" alt="Analytical setup for trace-element and REE workflows" loading="lazy" decoding="async">
           <strong>Method Development</strong>
           <p class="muted">
             Instrument optimization, standards and QC design, and REE/trace-element workflows at ultra-low levels.
@@ -137,19 +105,7 @@
       <div class="grid">
 
         <div class="card">
-          <picture>
-            <!-- OPTIONAL WEBP
-            <source type="image/webp" srcset="
-              assets/projects/meteoric-calcite-480.webp 480w,
-              assets/projects/meteoric-calcite-800.webp 800w,
-              assets/projects/meteoric-calcite-1200.webp 1200w" sizes="(max-width: 880px) 100vw, 520px">
-            -->
-            <source type="image/jpeg" srcset="
-              assets/projects/meteoric-calcite-480.jpeg 480w,
-              assets/projects/meteoric-calcite-800.jpeg 800w,
-              assets/projects/meteoric-calcite-1200.jpeg 1200w" sizes="(max-width: 880px) 100vw, 520px">
-            <img class="media" src="assets/projects/meteoric-calcite-800.jpeg" alt="Altered fossil coral showing meteoric calcite" width="1200" height="750">
-          </picture>
+          <img class="media" src="assets/meteoric-calcite.jpeg" alt="Altered fossil coral showing meteoric calcite" loading="lazy" decoding="async">
           <strong>Sea Level from Meteoric Calcite</strong>
           <p>
             U–Th dating of meteoric calcite in highly altered fossil corals. Trace-element screening, micro-sampling,
@@ -158,19 +114,7 @@
         </div>
 
         <div class="card">
-          <picture>
-            <!-- OPTIONAL WEBP
-            <source type="image/webp" srcset="
-              assets/projects/enso-proxies-480.webp 480w,
-              assets/projects/enso-proxies-800.webp 800w,
-              assets/projects/enso-proxies-1200.webp 1200w" sizes="(max-width: 880px) 100vw, 520px">
-            -->
-            <source type="image/jpeg" srcset="
-              assets/projects/enso-proxies-480.jpeg 480w,
-              assets/projects/enso-proxies-800.jpeg 800w,
-              assets/projects/enso-proxies-1200.jpeg 1200w" sizes="(max-width: 880px) 100vw, 520px">
-            <img class="media" src="assets/projects/enso-proxies-800.jpeg" alt="Time-series concept for ENSO signals in coral geochemistry" width="1200" height="750">
-          </picture>
+          <img class="media" src="assets/enso-proxies.jpeg" alt="Time-series concept for ENSO signals in coral geochemistry" loading="lazy" decoding="async">
           <strong>ENSO from Coral Proxies</strong>
           <p>
             LA-ICP-MS Mg/Ca and Li/Mg time series with two-stage smoothing and seasonal removal for anomaly detection,
@@ -179,19 +123,7 @@
         </div>
 
         <div class="card">
-          <picture>
-            <!-- OPTIONAL WEBP
-            <source type="image/webp" srcset="
-              assets/projects/reef-chemistry-480.webp 480w,
-              assets/projects/reef-chemistry-800.webp 800w,
-              assets/projects/reef-chemistry-1200.webp 1200w" sizes="(max-width: 880px) 100vw, 520px">
-            -->
-            <source type="image/jpeg" srcset="
-              assets/projects/reef-chemistry-480.jpeg 480w,
-              assets/projects/reef-chemistry-800.jpeg 800w,
-              assets/projects/reef-chemistry-1200.jpeg 1200w" sizes="(max-width: 880px) 100vw, 520px">
-            <img class="media" src="assets/projects/reef-chemistry-800.jpeg" alt="Reef flat water sampling and carbonate chemistry instrumentation" width="1200" height="750">
-          </picture>
+          <img class="media" src="assets/reef-chemistry.jpeg" alt="Reef flat water sampling and carbonate chemistry instrumentation" loading="lazy" decoding="async">
           <strong>Reef Carbonate Chemistry</strong>
           <p>
             High-frequency DIC/TA and δ<em>13</em>C<sub>DIC</sub> observations on a reef flat to separate metabolic and physical drivers,
