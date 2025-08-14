@@ -28,10 +28,22 @@
   }
   </script>
   <style>
-    /* Small helpers in case style.css isn't updated yet */
+    /* helpers (kept here in case style.css wasn't updated) */
     .media{display:block;width:100%;height:auto;border-radius:12px;margin-bottom:10px;object-fit:cover}
     .gallery{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .gallery a{display:block}
     .gallery-img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px}
+    .poster{display:block;width:100%;max-width:820px;border-radius:14px;box-shadow:0 12px 34px rgba(0,0,0,.25);margin:10px 0}
+    .muted{color:var(--muted)}
+    .callout{background:color-mix(in oklab,var(--panel) 70%,transparent);border:1px solid var(--border);border-radius:14px;padding:14px 16px}
+    .callout h3{margin:0 0 6px;font-size:18px}
+    .callout ul{margin:8px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+    .callout a{color:var(--accent);text-decoration:none}
+    /* Lightbox */
+    .lb-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:1000;padding:20px}
+    .lb-backdrop.open{display:flex}
+    .lb-img{max-width:92vw;max-height:88vh;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+    .lb-close{position:fixed;top:16px;right:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:10px;padding:8px 10px;cursor:pointer;font-weight:700}
   </style>
 </head>
 <body>
@@ -50,53 +62,78 @@
 
   <div class="container">
 
-    <section class="section">
-      <h2>Teaching & Outreach</h2>
-      <p>
-        I teach geochemical methods and climate applications with an emphasis on transparent analysis,
-        reproducible workflows, and safe, hands-on laboratory practice. I enjoy translating technical concepts
-        into approachable exercises for students at different levels.
-      </p>
-      <div class="grid">
-        <div class="card">
-          <strong>Workshops</strong>
-          <p class="muted">Python for Geochemists; LA-ICP-MS QA/QC; U–Th data reduction and reporting.</p>
-        </div>
-        <div class="card">
-          <strong>Guest Lectures</strong>
-          <p class="muted">Coral archives & sea-level reconstructions (Princeton; UQ).</p>
-        </div>
-        <div class="card">
-          <strong>Community</strong>
-          <p class="muted">Science communication and dialogues connecting climate, oceans, and society.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- New section: Volunteer Teaching in Bangladesh -->
+    <!-- 1) Volunteer Teaching in Bangladesh -->
     <section class="section">
       <h2>Volunteer Teaching in Bangladesh</h2>
       <p>
-        I volunteered with students and early-career researchers in Bangladesh, co-leading short courses on
-        field sampling, carbonate geochemistry, and data analysis. We covered practical lab safety, sample prep,
-        and open workflows in Python for organizing, visualizing, and quality-checking geochemical time series.
-        The goal was to build confidence with real datasets and to connect local environmental questions with
-        methods that are transparent and repeatable.
+        <strong>January–February 2025</strong> — Invited by the <em>Be Well Institute</em> (rural Bangladesh), I designed and taught an
+        undergraduate short course on soil science and biogeochemical nutrient cycles for ~25 students, tailored to local agriculture.
+        We combined lectures with hands-on monitoring of compost and soils (temperature, pH, moisture, respiration, major-element ratios)
+        to connect nutrient cycling and mineral micronutrients with plant health. Participant feedback highlighted better engagement and
+        comprehension; I continue to receive follow-up questions from students.
       </p>
 
-      <!-- Topics snapshot -->
       <ul class="list" style="margin-top:12px">
-        <li><strong>Hands-on methods:</strong> sampling, QA/QC, and simple calibration checks</li>
-        <li><strong>Data skills:</strong> tidy data, plotting, seasonal cycles & anomaly detection</li>
-        <li><strong>Applications:</strong> coastal water quality, carbonate chemistry, coral proxies</li>
+        <li><strong>Hands-on methods:</strong> field sampling, lab safety, simple calibration & QA checks</li>
+        <li><strong>Data skills:</strong> tidy data, plots, seasonal cycles, basic anomaly detection</li>
+        <li><strong>Applications:</strong> compost monitoring, soil quality, nutrient cycling for local crops</li>
       </ul>
 
-      <!-- 4-image gallery (upload these files into /assets) -->
+      <!-- 4-image gallery with lightbox -->
       <div class="gallery" style="margin-top:16px">
-        <img class="gallery-img" src="assets/bangladesh-1.jpeg" alt="Teaching session with students in Bangladesh" loading="lazy" decoding="async">
-        <img class="gallery-img" src="assets/bangladesh-2.jpeg" alt="Hands-on lab activity during workshop" loading="lazy" decoding="async">
-        <img class="gallery-img" src="assets/bangladesh-3.jpeg" alt="Group discussion on data analysis" loading="lazy" decoding="async">
-        <img class="gallery-img" src="assets/bangladesh-4.jpeg" alt="Field demonstration and sampling overview" loading="lazy" decoding="async">
+        <a href="assets/bangladesh-1.jpeg"><img class="gallery-img" src="assets/bangladesh-1.jpeg" alt="Teaching session with students in Bangladesh" loading="lazy" decoding="async"></a>
+        <a href="assets/bangladesh-2.jpeg"><img class="gallery-img" src="assets/bangladesh-2.jpeg" alt="Hands-on lab activity during the short course" loading="lazy" decoding="async"></a>
+        <a href="assets/bangladesh-3.jpeg"><img class="gallery-img" src="assets/bangladesh-3.jpeg" alt="Group discussion on data analysis and soil metrics" loading="lazy" decoding="async"></a>
+        <a href="assets/bangladesh-4.jpeg"><img class="gallery-img" src="assets/bangladesh-4.jpeg" alt="Field demonstration and sampling overview" loading="lazy" decoding="async"></a>
+      </div>
+    </section>
+
+    <!-- 2) Outreach -->
+    <section class="section">
+      <h2>Outreach</h2>
+      <p class="muted">Science communication for academic and non-specialist audiences.</p>
+      <ul class="list">
+        <li>
+          <strong>University of Dhaka Podcast</strong> — Conversation on global and local environmental issues.
+          <a href="https://www.youtube.com/watch?v=sqGn2sHIBGI" target="_blank" rel="noopener">Watch</a>
+        </li>
+        <li><strong>Public talks & community events</strong> — Climate, oceans, and practical geoscience.</li>
+        <li><strong>Mentoring</strong> — Lab practice, data skills, and research ethics.</li>
+      </ul>
+    </section>
+
+    <!-- 3) Community Workshop -->
+    <section class="section">
+      <h2>Community Workshop: Mind Matters — Understanding Depression & Anxiety</h2>
+      <p>
+        A four-part community series on stress, anxiety, and low mood—sharing science-based tools for understanding and hope.
+        This event is educational and does not replace professional medical care.
+      </p>
+
+      <ul class="list" style="margin-top:12px">
+        <li><strong>Dates:</strong> September 4–6, 2025 (Thu–Sat)</li>
+        <li><strong>Schedule:</strong> Thu 7:00 pm; Fri 7:00 pm; Sat 11:00 am & 3:00 pm (4 sessions)</li>
+        <li><strong>Venue:</strong> Hightstown SDA Church, 116 Broad Street, Hightstown, NJ 08520</li>
+        <li><strong>Presenter:</strong> Research Scientist & Science Communicator, Marcos Salas-Saavedra, PhD</li>
+      </ul>
+
+      <!-- Poster image + flyer download -->
+      <img class="poster" src="assets/mind-matters.jpeg" alt="Mind Matters workshop poster: Understanding Depression and Anxiety — Sept 4–6, 2025" loading="lazy" decoding="async">
+      <p><a class="btn secondary" href="assets/mind-matters-flyer.pdf">Download flyer (PDF)</a></p>
+
+      <!-- Help lines -->
+      <div class="callout" style="margin-top:16px">
+        <h3>Get Help Now (NJ & US)</h3>
+        <ul>
+          <li><strong>988 Suicide & Crisis Lifeline:</strong> <a href="tel:988">Call or text 988</a> • <a href="https://988lifeline.org/" target="_blank" rel="noopener">chat online</a> — 24/7, free & confidential.</li>
+          <li><strong>NJ MentalHealthCares:</strong> <a href="tel:+18662024357">866-202-HELP (4357)</a> — Emotional support, info & referrals (live 8am–8pm daily).</li>
+          <li><strong>NJ Hopeline:</strong> <a href="tel:+18556546735">855-654-6735</a> — Statewide suicide prevention line (24/7).</li>
+          <li><strong>PerformCare (Youth & Families):</strong> <a href="tel:+18776527624">1-877-652-7624</a> — 24/7 support and mobile response for NJ children/youth.</li>
+          <li><strong>NJ Domestic Violence Hotline:</strong> <a href="tel:+18005727233">1-800-572-SAFE (7233)</a> — 24/7 confidential services.</li>
+          <li><strong>NJCASA Sexual Violence Hotline:</strong> <a href="tel:+18006017200">1-800-601-7200</a> — 24/7 statewide support.</li>
+          <li><strong>NJ Vet2Vet (Veterans & Families):</strong> <a href="tel:+18668387654">1-866-838-7654</a> — 24/7 peer support.</li>
+        </ul>
+        <p class="muted" style="margin-top:8px">If someone is in immediate danger, call <strong>911</strong>.</p>
       </div>
     </section>
 
@@ -105,5 +142,36 @@
       <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
     </div>
   </div>
+
+  <!-- Lightbox element (one per page) -->
+  <div class="lb-backdrop" id="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="Close image (Esc)">✕</button>
+    <img class="lb-img" id="lbImg" alt="">
+  </div>
+
+  <script>
+    // Simple lightbox
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const lbClose = document.getElementById('lbClose');
+
+    function openLB(src, alt){
+      lbImg.src = src; lbImg.alt = alt || "";
+      lb.classList.add('open'); lb.setAttribute('aria-hidden','false');
+    }
+    function closeLB(){
+      lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); lbImg.src = "";
+    }
+    document.querySelectorAll('.gallery a').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const img = a.querySelector('img');
+        openLB(a.getAttribute('href'), img ? img.alt : "");
+      });
+    });
+    lbClose.addEventListener('click', closeLB);
+    lb.addEventListener('click', (e)=>{ if(e.target===lb) closeLB(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeLB(); });
+  </script>
 </body>
 </html>
