@@ -9,6 +9,12 @@
   <meta property="og:image" content="assets/profile.jpeg">
   <link rel="icon" href="assets/profile.jpeg">
   <link rel="stylesheet" href="assets/style.css">
+
+  <!-- Privacy-friendly analytics (Plausible) -->
+  <link rel="preconnect" href="https://plausible.io">
+  <script defer data-domain="salassaavedra.org" src="https://plausible.io/js/script.js"></script>
+
+  <!-- Page styles (keep these) -->
   <style>
     .media{display:block;width:100%;height:auto;border-radius:12px;margin-bottom:10px;object-fit:cover}
     .gallery{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
@@ -19,7 +25,54 @@
     .callout h3{margin:0 0 6px;font-size:18px}
     .callout ul{margin:8px 0 0;padding:0;list-style:none;display:grid;gap:8px}
   </style>
+
+  <!-- Event JSON-LD for the community workshop -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Mind Matters — Understanding Depression & Anxiety",
+    "description": "A four-part community series on stress, anxiety, and low mood—sharing science-based tools for understanding and hope. Educational; not a substitute for medical care.",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "isAccessibleForFree": true,
+    "url": "https://salassaavedra.org/teaching.html",
+    "image": ["https://salassaavedra.org/assets/mind-matters.jpeg"],
+    "startDate": "2025-09-04T19:00:00-04:00",
+    "location": {
+      "@type": "Place",
+      "name": "Hightstown SDA Church",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "116 Broad Street",
+        "addressLocality": "Hightstown",
+        "addressRegion": "NJ",
+        "postalCode": "08520",
+        "addressCountry": "US"
+      }
+    },
+    "organizer": {
+      "@type": "Person",
+      "name": "Marcos Salas-Saavedra, PhD",
+      "url": "https://salassaavedra.org/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://salassaavedra.org/teaching.html"
+    },
+    "subEvent": [
+      { "@type": "Event", "name": "Session 1", "startDate": "2025-09-04T19:00:00-04:00", "location": { "@type": "Place", "name": "Hightstown SDA Church" } },
+      { "@type": "Event", "name": "Session 2", "startDate": "2025-09-05T19:00:00-04:00", "location": { "@type": "Place", "name": "Hightstown SDA Church" } },
+      { "@type": "Event", "name": "Session 3", "startDate": "2025-09-06T11:00:00-04:00", "location": { "@type": "Place", "name": "Hightstown SDA Church" } },
+      { "@type": "Event", "name": "Session 4", "startDate": "2025-09-06T15:00:00-04:00", "location": { "@type": "Place", "name": "Hightstown SDA Church" } }
+    ]
+  }
+  </script>
 </head>
+
 <body>
   <div class="header">
     <div class="container nav">
