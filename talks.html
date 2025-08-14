@@ -2,44 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Marcos Salas-Saavedra, PhD</title>
-  <meta name="description" content="Environmental Geochemist • U–Th Geochronology • Coral Paleoclimate">
-  <meta property="og:title" content="Marcos Salas-Saavedra, PhD">
-  <meta property="og:description" content="Environmental Geochemist • U–Th Geochronology • Coral Paleoclimate">
-  <meta property="og:image" content="assets/profile.svg">
-  <link rel="icon" href="assets/profile.svg">
+  <title>Talks & Media — Marcos Salas-Saavedra, PhD</title>
+  <meta name="description" content="Invited talks, conference presentations, and media.">
+  <meta property="og:title" content="Talks & Media — Marcos Salas-Saavedra">
+  <meta property="og:description" content="Selected invited talks, conference presentations, and media appearances.">
+  <meta property="og:image" content="assets/profile.jpeg">
+  <link rel="icon" href="assets/profile.jpeg">
   <link rel="stylesheet" href="assets/style.css">
-  <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "Person", "name": "Marcos Salas-Saavedra, PhD", "jobTitle": "Environmental Geochemist", "affiliation": {"@type": "Organization", "name": "Princeton University"}, "email": "mailto:yourname@example.com", "address": "Princeton, NJ, USA", "sameAs": ["https://scholar.google.com/", "https://orcid.org/", "https://github.com/msalass", "https://www.linkedin.com/", "https://x.com/"]}
-  </script>
 </head>
 <body>
-  <div class="header"><div class="container nav">
-    <div class="brand"><a href="index.html">Marcos Salas-Saavedra, PhD<small>Environmental Geochemist • U–Th Geochronology • Coral Paleoclimate</small></a></div>
-    <nav class="menu"><a href="index.html" class="">Home</a>
-        <a href="research.html" class="">Research</a>
-        <a href="publications.html" class="">Publications</a>
-        <a href="teaching.html" class="">Teaching & Outreach</a>
-        <a href="projects.html" class="">Projects</a>
+  <div class="header">
+    <div class="container nav">
+      <div class="brand"><a href="index.html">Marcos Salas-Saavedra, PhD<small>Environmental Geochemist • U–Th Geochronology • Coral Paleoclimate</small></a></div>
+      <button class="menu-toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Toggle menu">☰ Menu</button>
+      <nav id="site-menu" class="menu" data-open="false">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="teaching.html">Teaching & Outreach</a>
+        <a href="projects.html">Projects</a>
         <a href="talks.html" class="active">Talks & Media</a>
-        <a href="contact.html" class="">Contact</a></nav>
-  </div></div>
-  <div class="container">
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
 
-<section class="section">
-  <h2>Talks & Media</h2>
-  <p>Selected talks and recordings. Add links to slides or videos as available.</p>
-  <ul class="list">
-    <li><strong>AGU 2024 — U–Th of Meteoric Calcite in Altered Corals</strong> Slides • Recording</li>
-    <li><strong>Guest Lecture: Coral Archives & Sea-Level</strong> Slides</li>
-    <li><strong>Workshop: Python for Geochemists</strong> Materials</li>
-  </ul>
-</section>
+  <div class="container">
+    <section class="section">
+      <h2>Invited Talks</h2>
+      <ul class="list">
+        <li><strong>Coral archives and sea-level change.</strong> Seminar, Princeton University (Year).</li>
+        <li><strong>U–Th dating in challenging carbonates.</strong> Seminar, The University of Queensland (Year).</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Conference Presentations</h2>
+      <ul class="list">
+        <li><strong>Holocene reef development and water quality reconstruction, southern GBR.</strong> AGU (Year).</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Media & Podcasts</h2>
+      <ul class="list">
+        <li><strong>University of Dhaka Podcast</strong> — Global and local environmental issues. <a href="https://www.youtube.com/watch?v=sqGn2sHIBGI" target="_blank" rel="noopener">Watch</a></li>
+      </ul>
+    </section>
 
     <div class="footer">
       <div>© <span id="y"></span> Marcos Salas-Saavedra, PhD • <a href="assets/CV.pdf" style="color:var(--accent);text-decoration:none">CV (PDF)</a></div>
       <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
     </div>
   </div>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('site-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const open = menu.getAttribute('data-open') === 'true';
+        menu.setAttribute('data-open', String(!open));
+        toggle.setAttribute('aria-expanded', String(!open));
+      });
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        menu.setAttribute('data-open','false'); toggle.setAttribute('aria-expanded','false');
+      }));
+    }
+  </script>
 </body>
 </html>
