@@ -14,6 +14,7 @@
   </script>
 </head>
 <body>
+  <!-- Header with mobile menu -->
   <div class="header">
     <div class="container nav">
       <div class="brand">
@@ -36,6 +37,7 @@
 
   <div class="container">
 
+    <!-- Hero -->
     <section class="hero">
       <div>
         <span class="kicker">Welcome</span>
@@ -50,17 +52,34 @@
           <span class="tag">Paleoclimate</span><span class="tag">Sea Level</span>
         </div>
       </div>
-      <img class="hero-img" src="assets/profile.jpeg" alt="Marcos Salas-Saavedra headshot" loading="lazy" decoding="async">
+
+      <!-- Responsive hero image (no fixed width/height) -->
+      <div class="hero-media">
+        <picture>
+          <!-- (Optional) Add smaller versions later; this works with your single JPEG -->
+          <img
+            class="hero-img"
+            src="assets/profile.jpeg"
+            alt="Marcos Salas-Saavedra headshot"
+            loading="lazy" decoding="async"
+          >
+        </picture>
+      </div>
     </section>
 
+    <!-- About -->
     <section class="section">
       <h2>About</h2>
       <p>My research bridges geochronology, geochemistry, and paleoclimate. I investigate past climate and sea-level variability using coral archives and carbonate systems, with expertise in U–Th geochronology, trace-element geochemistry, and multi-instrument workflows (LA-ICP-MS, MC-ICP-MS, LIBS, micro-CT/3D, SEM). I combine rigorous laboratory methods with Python-based data processing, time-series analysis, and QA/QC for low-level trace-element detection (including REEs).</p>
       <details style="margin-top:10px"><summary>Read extended bio</summary>
-        <p style="white-space:pre-wrap">I develop high-precision methods for challenging carbonate samples—including meteoric calcite phases in altered fossil corals—to refine sea-level reconstructions. I also build reproducible workflows for data reduction and signal detection (e.g., ENSO) from coral proxies, and mentor students in advanced analytical techniques. Fieldwork includes the Great Barrier Reef and Curaçao; publications span Quaternary Science Reviews, Chemical Geology, and Sedimentary Geology.</p>
+        <p style="white-space:pre-wrap">I’m an environmental geochemist who integrates geochronology, analytical chemistry, and climate reconstruction to understand how reef systems and sea level have changed through time. I’m currently a Postdoctoral Research Associate at Princeton University, where I investigate past climate and sea-level variability using coral archives and other carbonate materials. My technical expertise spans U–Th geochronology; radiogenic and stable isotope analysis; trace-element and REE geochemistry; and advanced instrumentation including LA-ICP-MS, MC-ICP-MS, LIBS, micro-CT/3D imaging, and SEM.
+I develop and apply high-precision methods to challenging carbonate samples—especially meteoric calcite phases in highly altered fossil corals—to refine sea-level reconstructions. I also build Python-based workflows for data reduction, time-series analysis, and rigorous QA/QC at ultra-low detection levels, enabling me to extract seasonal to multi-decadal signals (e.g., ENSO) from coral proxy records. My portfolio includes instrument optimization, automated column chemistry (prepFAST MC), and gravimetric spike preparation to improve dating accuracy.
+I’ve led and supported field campaigns on the Great Barrier Reef and in the southern Caribbean (Curaçao), collecting materials for geochronology, carbonate chemistry, and stable-isotope studies of reef metabolism. My publications include work in Quaternary Science Reviews, Chemical Geology, and Sedimentary Geology, and I’ve presented at major meetings such as AGU. In the lab, I mentor graduate students in advanced analytical techniques and contribute to safe, efficient laboratory operations and instrument maintenance planning.
+I earned my Ph.D. in Geochemistry and Geochronology from The University of Queensland and hold a Licentiate and a Bachelor’s in Biological Sciences from the Austral University of Chile. My training has been supported by competitive funding, including Chile’s CONICYT Scholarship and internal research support at Princeton. Across all of my work, I aim to deliver robust, decision-relevant insights into Earth-system change by pairing meticulous laboratory practice with transparent, reproducible computation—and by communicating results clearly to both scientific and broader communities.</p>
       </details>
     </section>
 
+    <!-- Highlighted Work -->
     <section class="section">
       <h2>Highlighted Work</h2>
       <div class="grid">
@@ -73,12 +92,14 @@
       </div>
     </section>
 
+    <!-- Footer -->
     <div class="footer">
       <div>© <span id="y"></span> Marcos Salas-Saavedra, PhD • <a href="assets/CV.pdf" style="color:var(--accent);text-decoration:none">CV (PDF)</a></div>
       <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
     </div>
   </div>
 
+  <!-- Mobile menu script -->
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.getElementById('site-menu');
