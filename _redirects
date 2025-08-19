@@ -1,14 +1,26 @@
-# Force HTTPS on apex
-http://salassaavedra.org/*   https://salassaavedra.org/:splat  301!
+# 1) Canonical domain: HTTPS + apex (no www)
+http://salassaavedra.org/*       https://salassaavedra.org/:splat   301!
+http://www.salassaavedra.org/*   https://salassaavedra.org/:splat   301!
+https://www.salassaavedra.org/*  https://salassaavedra.org/:splat   301!
 
-# Force apex (no www)
-https://www.salassaavedra.org/*  https://salassaavedra.org/:splat  301!
-
-# Canonical home
+# 2) Canonical home
 /index.html   /   301
 
-# Nice shortcuts
-/cv           /assets/CV.pdf   302
-/scholar      https://scholar.google.com/citations?user=skWigjoAAAAJ&hl=en   302
-/orcid        https://orcid.org/0000-0003-0358-5676   302
-/linkedin     https://www.linkedin.com/in/marcos-e-salas-saavedra   302
+# 3) Pretty URLs (redirect .html -> extensionless)
+# If you only have top-level pages, this is safe. Otherwise list pages explicitly.
+#:page.html   /:page   301
+/research.html      /research      301
+/publications.html  /publications  301
+/projects.html      /projects      301
+/teaching.html      /teaching      301
+/talks.html         /talks         301
+/contact.html       /contact       301
+
+# 4) Shortcuts (permanent)
+/cv         /assets/CV.pdf   301
+/scholar    https://scholar.google.com/citations?user=skWigjoAAAAJ&hl=en   301
+/orcid      https://orcid.org/0000-0003-0358-5676   301
+/linkedin   https://www.linkedin.com/in/marcos-e-salas-saavedra   301
+
+# 5) Custom 404 (keep this LAST; Netlify will serve /404.html with 404 status)
+/*   /404.html   404
