@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://salassaavedra.org/</loc><priority>1.0</priority><changefreq>weekly</changefreq><lastmod>2025-08-14</lastmod></url>
-  <url><loc>https://salassaavedra.org/research.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2025-08-14</lastmod></url>
-  <url><loc>https://salassaavedra.org/publications.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2025-08-14</lastmod></url>
-  <url><loc>https://salassaavedra.org/projects.html</loc><priority>0.7</priority><changefreq>monthly</changefreq><lastmod>2025-08-14</lastmod></url>
-  <url><loc>https://salassaavedra.org/teaching.html</loc><priority>0.7</priority><changefreq>monthly</changefreq><lastmod>2025-08-14</lastmod></url>
-  <url><loc>https://salassaavedra.org/talks.html</loc><priority>0.6</priority><changefreq>monthly</changefreq><lastmod>2025-08-14</lastmod></url>
-  <url><loc>https://salassaavedra.org/contact.html</loc><priority>0.6</priority><changefreq>monthly</changefreq><lastmod>2025-08-14</lastmod></url>
+  <url><loc>https://salassaavedra.org/</loc><priority>1.0</priority><changefreq>weekly</changefreq><lastmod>2025-08-19</lastmod></url>
+  <url><loc>https://salassaavedra.org/research.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2025-08-19</lastmod></url>
+  <url><loc>https://salassaavedra.org/publications.html</loc><priority>0.8</priority><changefreq>monthly</changefreq><lastmod>2025-08-19</lastmod></url>
+  <url><loc>https://salassaavedra.org/projects.html</loc><priority>0.7</priority><changefreq>monthly</changefreq><lastmod>2025-08-19</lastmod></url>
+  <url><loc>https://salassaavedra.org/teaching.html</loc><priority>0.7</priority><changefreq>monthly</changefreq><lastmod>2025-08-19</lastmod></url>
+  <url><loc>https://salassaavedra.org/talks.html</loc><priority>0.6</priority><changefreq>monthly</changefreq><lastmod>2025-08-19</lastmod></url>
+  <url><loc>https://salassaavedra.org/contact.html</loc><priority>0.6</priority><changefreq>monthly</changefreq><lastmod>2025-08-19</lastmod></url>
 </urlset>
