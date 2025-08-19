@@ -3,15 +3,36 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects — Marcos Salas-Saavedra, PhD</title>
-  <meta name="description" content="Current projects on sea-level reconstructions and mid-Holocene coral archives.">
+  <meta name="description" content="Current projects: U–Th dating of meteoric calcite in altered fossil corals; mid-Holocene coral geochemistry at Heron Reef.">
   <meta property="og:title" content="Projects — Marcos Salas-Saavedra">
-  <meta property="og:description" content="U–Th dating of meteoric calcite; mid-Holocene ENSO and monsoon from coral trace elements.">
+  <meta property="og:description" content="Sea-level from meteoric calcite and mid-Holocene ENSO from coral archives.">
   <meta property="og:image" content="assets/profile.jpeg">
   <link rel="icon" href="assets/profile.jpeg">
-  <link rel="stylesheet" href="assets/style.css?v=3">
-  <style>.media{display:block;width:100%;height:auto;border-radius:12px;margin-bottom:10px;object-fit:cover}</style>
-<link rel="preconnect" href="https://plausible.io">
-<script defer data-domain="salassaavedra.org" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.tagged-events.js"></script>
+  <link rel="stylesheet" href="assets/style.css?v=4">
+  <link rel="preconnect" href="https://plausible.io">
+  <script defer data-domain="salassaavedra.org" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.tagged-events.js"></script>
+
+  <!-- Page-specific styles -->
+  <style>
+    .media{display:block;width:100%;height:auto;border-radius:12px;margin-bottom:10px;object-fit:cover}
+    .gallery{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .gallery a{display:block}
+    .gallery-img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px}
+    .section + .section{margin-top:36px;padding-top:24px;position:relative}
+    .section + .section::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
+    .subtle{color:var(--muted);font-size:14px}
+    /* Lightbox UI */
+    .lb-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:1000;padding:20px}
+    .lb-img{max-width:92vw;max-height:88vh;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+    .lb-close,.lb-prev,.lb-next{
+      position:fixed;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);
+      color:#fff;border-radius:12px;padding:10px 12px;font-weight:800;cursor:pointer
+    }
+    .lb-close{top:16px;right:18px}
+    .lb-prev{left:16px;top:50%;transform:translateY(-50%)}
+    .lb-next{right:16px;top:50%;transform:translateY(-50%)}
+    @media (max-width:880px){.lb-prev,.lb-next{padding:8px 10px}}
+  </style>
 </head>
 <body>
   <div class="header">
@@ -31,20 +52,64 @@
   </div>
 
   <div class="container">
+
     <section class="section">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="card">
-          <img class="media" src="assets/meteoric-calcite.jpeg" alt="Microsampling meteoric calcite in altered coral" loading="lazy">
-          <strong>U–Th Dating of Meteoric Calcite in Altered Fossil Corals</strong>
-          <p>When pristine aragonitic corals are scarce, sea-level histories stall. I target the <em>meteoric calcite</em> filling pores in altered corals and test U–Th dating. We map mineral boundaries with LA-ICP-MS and 3D micro-CT, then micro-sample for MC-ICP-MS ages. Early data show usable U and minimal detrital Th—opening a new path for sea-level constraints.</p>
-        </div>
-        <div class="card">
-          <img class="media" src="assets/enso-proxies.jpeg" alt="Time-series concept for ENSO signals in coral geochemistry" loading="lazy">
-          <strong>Mid-Holocene ENSO & Monsoon from Coral Trace Elements (Heron Reef)</strong>
-          <p>Two ~60-year coral snapshots at ~6.9 and 5.2 ka capture sub-seasonal variability on the southern GBR. High-resolution profiles (e.g., Mg/Ca, Li/Mg, Mn/Ca, REEs) track temperature, river plumes, and water quality to test how ENSO and the Indo-Australian Summer Monsoon varied through time.</p>
-        </div>
+      <h2>Sea Level from Meteoric Calcite</h2>
+      <p>
+        Many older fossil corals are too altered for dating because aragonite has recrystallized to calcite.
+        We test a new path: target <em>meteoric calcite</em> cements that filled coral cavities during subaerial exposure.
+        We map fabrics and chemistry with micro-CT and LA-ICP-MS to isolate clean meteoric cements, then obtain U–Th ages
+        (LA-MC-ICP-MS / solution) to provide <strong>minimum ages for lowstands</strong> and sharpen sea-level histories
+        for older interglacials.
+      </p>
+      <ul class="list" style="margin-top:10px">
+        <li><strong>Key questions:</strong> Can meteoric calcite reliably constrain exposure/lowstand timing where skeletal aragonite is lost?</li>
+        <li><strong>Approach & methods:</strong> Micro-CT to visualize voids/cements; LA-ICP-MS lines to identify meteoric vs neomorphic calcite; select targets with low <em>232</em>Th; date with LA-MC-ICP-MS and solution U–Th.</li>
+        <li><strong>Early results:</strong> Meteoric calcite shows <strong>no detectable detrital <em>232</em>Th</strong> in screened zones and
+          <strong>low but measurable U (≈0.5 ppm avg)</strong>. U varies along ablation lines with consistent patterns, likely reflecting thin subsurface layers. Sequences include Ribbon Reef 5, IODP 325, One Tree Reef, Windley Key (FL), and Western Australia.</li>
+        <li><strong>What’s next:</strong> Tighten identification of cement boundaries, prioritize higher-U targets for precision ages, and integrate with coralgal/stratigraphic context to refine MIS-scale sea-level curves.</li>
+      </ul>
+
+      <!-- Meteoric calcite gallery -->
+      <div class="gallery" style="margin-top:16px">
+        <!-- Add/remove images as you like; filenames live in /assets/ -->
+        <a href="assets/meteoric-1.jpeg"><img class="gallery-img" src="assets/meteoric-1.jpeg" alt="Micro-CT slice highlighting coral cavity infilled by meteoric calcite" loading="lazy" decoding="async"></a>
+        <a href="assets/meteoric-2.jpeg"><img class="gallery-img" src="assets/meteoric-2.jpeg" alt="LA-ICP-MS ablation tracks across cement boundaries" loading="lazy" decoding="async"></a>
+        <a href="assets/meteoric-3.jpeg"><img class="gallery-img" src="assets/meteoric-3.jpeg" alt="Close-up of meteoric calcite fabric in altered coral" loading="lazy" decoding="async"></a>
+        <a href="assets/meteoric-4.jpeg"><img class="gallery-img" src="assets/meteoric-4.jpeg" alt="Sample overview from Ribbon Reef / IODP sequence" loading="lazy" decoding="async"></a>
+        <a href="assets/meteoric-5.jpeg"><img class="gallery-img" src="assets/meteoric-5.jpeg" alt="Instrument setup: LA system connected to MC-ICP-MS" loading="lazy" decoding="async"></a>
+        <a href="assets/meteoric-6.jpeg"><img class="gallery-img" src="assets/meteoric-6.jpeg" alt="U and 232Th screening plot identifying clean targets" loading="lazy" decoding="async"></a>
       </div>
+
+      <p class="subtle" style="margin-top:8px">
+        Notes: meteoric cements commonly have low detrital <em>232</em>Th and measurable U; we standardize U with Great Canyon Travertine (matrix matched). Lightbox: click any image and swipe/arrow through.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Mid-Holocene Coral Paleoclimate (Heron Reef)</h2>
+      <p>
+        We build two ~60-year, sub-seasonal coral records from <strong>~6.9 ka</strong> and <strong>~5.2 ka</strong> at Heron Reef
+        (southern GBR) to test how ENSO and the Indo-Australian Summer Monsoon behaved in the mid-Holocene. Using 193-nm LA-ICP-MS, we quantify
+        Li, B, Mg, Sr, Mn, Y, REEs, U, Th along growth bands, evaluate temperature proxies (e.g., Sr/Ca, Li/Mg, B/Ca) and water-quality indicators
+        (Mn/Ca, Y/Ho, Ce/Ce*), and compare seasonal cycles and interannual variance between windows.
+      </p>
+      <ul class="list" style="margin-top:10px">
+        <li><strong>Key questions:</strong> Did ENSO amplitude or hydroclimatic forcing differ between ~6.9 and ~5.2 ka, and how did terrigenous influence modulate near-shore water quality?</li>
+        <li><strong>Approach & methods:</strong> Strict screening for diagenesis; compositional/anomaly metrics; time-series and spectral analysis to isolate seasonal and 2–7-yr variability.</li>
+        <li><strong>Work in progress:</strong> Extract robust temperature and water-quality signals from low-level trace elements; benchmark spectra and variance across both windows; integrate with regional mid-Holocene frameworks.</li>
+      </ul>
+
+      <!-- Heron mid-Holocene gallery -->
+      <div class="gallery" style="margin-top:16px">
+        <a href="assets/heron-1.jpeg"><img class="gallery-img" src="assets/heron-1.jpeg" alt="Slabbed fossil coral from Heron Reef showing annual bands" loading="lazy" decoding="async"></a>
+        <a href="assets/heron-2.jpeg"><img class="gallery-img" src="assets/heron-2.jpeg" alt="Laser track plan over seasonal band couplets" loading="lazy" decoding="async"></a>
+        <a href="assets/heron-3.jpeg"><img class="gallery-img" src="assets/heron-3.jpeg" alt="Core workspace—sample cleaning and mounting" loading="lazy" decoding="async"></a>
+        <a href="assets/heron-4.jpeg"><img class="gallery-img" src="assets/heron-4.jpeg" alt="Proxy schematic for Sr/Ca, Li/Mg, and Mn/Ca" loading="lazy" decoding="async"></a>
+        <a href="assets/heron-5.jpeg"><img class="gallery-img" src="assets/heron-5.jpeg" alt="REE screening and anomaly metrics (Ce/Ce*, Y/Ho)" loading="lazy" decoding="async"></a>
+        <a href="assets/heron-6.jpeg"><img class="gallery-img" src="assets/heron-6.jpeg" alt="Example time series with seasonal and interannual variability" loading="lazy" decoding="async"></a>
+      </div>
+      <p class="subtle" style="margin-top:8px">Results will clarify the link between ocean–atmosphere dynamics and coastal water quality long before modern observations.</p>
     </section>
 
     <div class="footer">
@@ -53,7 +118,16 @@
     </div>
   </div>
 
+  <!-- Lightbox (swipe + arrows) -->
+  <div class="lb-backdrop" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <button class="lb-close" id="lbClose" aria-label="Close (Esc)">✕</button>
+    <button class="lb-prev" id="lbPrev" aria-label="Previous image">←</button>
+    <button class="lb-next" id="lbNext" aria-label="Next image">→</button>
+    <img class="lb-img" id="lbImg" alt="">
+  </div>
+
   <script>
+    // Mobile menu
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.getElementById('site-menu');
     if (toggle && menu) {
@@ -66,6 +140,43 @@
         menu.setAttribute('data-open','false'); toggle.setAttribute('aria-expanded','false');
       }));
     }
+
+    // Swipeable Lightbox (works for both galleries)
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const btnClose = document.getElementById('lbClose');
+    const btnPrev = document.getElementById('lbPrev');
+    const btnNext = document.getElementById('lbNext');
+    const links = Array.from(document.querySelectorAll('.gallery a'));
+    const images = links.map(a => ({href:a.getAttribute('href'), alt:(a.querySelector('img')?.alt)||""}));
+    let idx = 0, touchX = null;
+
+    function show(i){
+      if(!images.length) return;
+      idx = (i + images.length) % images.length;
+      lbImg.src = images[idx].href; lbImg.alt = images[idx].alt;
+      lb.style.display = 'flex'; lb.setAttribute('aria-hidden','false');
+    }
+    function closeLB(){ lb.style.display='none'; lb.setAttribute('aria-hidden','true'); lbImg.src=""; }
+
+    links.forEach((a,i)=> a.addEventListener('click', e=>{ e.preventDefault(); show(i); }) );
+    btnClose.addEventListener('click', closeLB);
+    btnPrev.addEventListener('click', ()=> show(idx-1));
+    btnNext.addEventListener('click', ()=> show(idx+1));
+    lb.addEventListener('click', (e)=>{ if(e.target===lb) closeLB(); });
+    document.addEventListener('keydown', (e)=>{
+      if(lb.getAttribute('aria-hidden')==='true') return;
+      if(e.key==='Escape') closeLB();
+      if(e.key==='ArrowLeft') show(idx-1);
+      if(e.key==='ArrowRight') show(idx+1);
+    });
+    lb.addEventListener('touchstart', (e)=>{ touchX = e.changedTouches[0].clientX; }, {passive:true});
+    lb.addEventListener('touchend', (e)=>{
+      if(touchX==null) return;
+      const dx = e.changedTouches[0].clientX - touchX;
+      if(Math.abs(dx)>40){ dx>0 ? show(idx-1) : show(idx+1); }
+      touchX = null;
+    }, {passive:true});
   </script>
 </body>
 </html>
