@@ -32,6 +32,7 @@ PAGE_FOR_PRETTY = {
     "/contact": "contact.html",
 }
 EMAIL_FILE = ROOT / "assets" / "site-email.js"
+CONFIRMED_EMAIL = "msalas@spicelab.cl"
 PLACEHOLDER = "REPLACE-ME@spicelab.cl"
 
 
@@ -42,8 +43,15 @@ class RefParser(HTMLParser):
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attr_map = {k: v for k, v in attrs if v is not None}
-        for key in ("href", "src"):
-            if key in attr_map:
+        for key in ("href", "src", "srcset"):
+            if key not in attr_map:
+                continue
+            if key == "srcset":
+                for part in attr_map[key].split(","):
+                    url = part.strip().split(" ")[0]
+                    if url:
+                        self.refs.append((key, url))
+            else:
                 self.refs.append((key, attr_map[key]))
 
 
@@ -98,19 +106,34 @@ def check_text(errors: list[str]) -> None:
             errors.append(f"'In review' still present in {rel}")
         if PLACEHOLDER in text:
             placeholder_hits.append(rel)
-    if placeholder_hits != ["assets/site-email.js"]:
+    if placeholder_hits:
         errors.append(
             "placeholder "
             + PLACEHOLDER
-            + " should appear only in assets/site-email.js, found: "
-            + (", ".join(placeholder_hits) or "(nowhere)")
+            + " must be gone, found in: "
+            + ", ".join(placeholder_hits)
         )
     email_js = EMAIL_FILE.read_text(encoding="utf-8")
-    if f'window.SITE_EMAIL = "{PLACEHOLDER}"' not in email_js:
-        errors.append("SITE_EMAIL constant missing from assets/site-email.js")
+    if f'window.SITE_EMAIL = "{CONFIRMED_EMAIL}"' not in email_js:
+        errors.append("SITE_EMAIL constant in assets/site-email.js is not " + CONFIRMED_EMAIL)
+    mailto = f'href="mailto:{CONFIRMED_EMAIL}"'
+    visible = f">{CONFIRMED_EMAIL}<"
     contact = (ROOT / "contact.html").read_text(encoding="utf-8")
-    if 'link.href = "mailto:" + window.SITE_EMAIL' not in contact:
-        errors.append("contact.html does not build a mailto: from SITE_EMAIL")
+    if mailto not in contact or visible not in contact:
+        errors.append("contact.html is missing a static mailto and visible address")
+    if "site-email.js" in contact:
+        errors.append("contact.html still depends on site-email.js for the address")
+    json_pages = ("index.html", "research.html", "publications.html")
+    for name in json_pages:
+        text = (ROOT / name).read_text(encoding="utf-8")
+        if f"mailto:{CONFIRMED_EMAIL}" not in text:
+            errors.append(f"{name} JSON-LD is missing mailto:{CONFIRMED_EMAIL}")
+    for path in iter_text_files():
+        if path.suffix.lower() != ".html":
+            continue
+        text = path.read_text(encoding="utf-8")
+        if "<div class=\"footer\">" in text and mailto not in text:
+            errors.append(f"{path.name} footer is missing mailto:{CONFIRMED_EMAIL}")
     if "x.com/M_SalasSaavedra" not in (ROOT / "index.html").read_text(encoding="utf-8"):
         errors.append("homepage JSON-LD/page is missing the X profile")
 

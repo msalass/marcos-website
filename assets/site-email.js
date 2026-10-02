@@ -1,5 +1,2 @@
-/* MUST-FIX BEFORE MERGE
- * Replace SITE_EMAIL with the confirmed @spicelab.cl address.
- * This file is the only place that address is written.
- */
-window.SITE_EMAIL = "REPLACE-ME@spicelab.cl";
+/* Confirmed contact address. Also written as a static mailto on the contact page, footer, and JSON-LD. */
+window.SITE_EMAIL = "msalas@spicelab.cl";
